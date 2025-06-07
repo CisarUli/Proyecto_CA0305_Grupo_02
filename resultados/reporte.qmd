@@ -80,4 +80,6 @@ DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 
 
 Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html
 
+Enlace a repositorio GitHub: https://github.com/CisarUli/Proyecto_CA0305_Grupo_02
+
 
