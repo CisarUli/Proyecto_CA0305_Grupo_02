@@ -51,7 +51,7 @@ class ClienteTelco:
 
 
 # Cargar el dataset
-df = pd.read_csv("../datos/Telco-Customer-Churn.csv")
+df = pd.read_csv("../datos/Telco-Customer-Churn4.csv")
 
 # Eliminar columnas no útiles para el modelo
 # 'customerID' es un identificador que no aporta información predictiva
@@ -65,7 +65,7 @@ df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 df = df.dropna()
 
 # Convertir la variable objetivo 'Churn' a formato binario: 0 (No) y 1 (Yes)
-df['Churn'] = df['Churn'].map({'No': 0, 'Yes': 1})
+# df['Churn'] = df['Churn'].map({'No': 0, 'Yes': 1})
 
 # Codificación de todas las variables categóricas
 # Excluimos 'Churn' porque ya está en formato binario y no necesita codificarse
