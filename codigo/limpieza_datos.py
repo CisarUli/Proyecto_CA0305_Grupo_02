@@ -76,12 +76,12 @@ df_encoded['Churn'] = df['Churn']
 
 
 # Separar variables predictoras (X) y variable objetivo (y)
-X = df_encoded.drop("Churn", axis=1)
+x = df_encoded.drop("Churn", axis=1)
 y = df_encoded["Churn"]
 
 # Dividir el dataset en entrenamiento (70%) y prueba (30%)
 # random_state permite que los resultados sean reproducibles
 # stratify mantiene la proporción de clases igual en ambos conjuntos
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=22, stratify=y
+x_train, x_test, y_train, y_test = train_test_split(
+    x, y, test_size=0.3, random_state=22, stratify=y
 )
