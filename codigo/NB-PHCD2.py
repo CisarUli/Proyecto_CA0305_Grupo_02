@@ -51,7 +51,7 @@ class ClienteTelco:
 
 
 # Cargar el dataset
-df = pd.read_csv("Telco-Customer-Churn.csv")
+df = pd.read_csv("../datos/Telco-Customer-Churn.csv")
 
 # Eliminar columnas no útiles para el modelo
 # 'customerID' es un identificador que no aporta información predictiva
