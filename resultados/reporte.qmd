@@ -72,6 +72,12 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 -   Se confirma que la calidad de las variables es más crítica que la cantidad de datos.
 -   El modelo Deep-BP-ANN superó a enfoques con CNN, ANN y *transfer learning*.
 
-## Referencia
+## Referencias
 
 Fujo, S. W., Subramanian, S., & Khder, M. A. (2022). *Customer churn prediction in telecommunication industry using deep learning*. Information Sciences Letters, 11(1), 185–198. <https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24>
+
+DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 de junio de 2025 de https://www.datacamp.com/tutorial/naive-bayes-scikit-learn
+
+Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html
+
+
