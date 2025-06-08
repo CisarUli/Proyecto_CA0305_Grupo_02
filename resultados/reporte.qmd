@@ -74,6 +74,27 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 
 ## Modelo XGB
 
+El modelo XGB, implementado con Python y xgboost mostró el siguiente desempeño:
+
+True Positives: 639 — predijo correctamente "Churn".
+False Positives: 172 — predijo "Churn" incorrectamente.
+False Negatives: 289 — no detectó "Churn".
+True Negatives: 5002 — predijo correctamente "No Churn".
+Métricas de evaluación:
+
+Clase 0 (No Churn):
+Precisión: 0.88 — acierta el 88% al predecir "No Churn".
+Recall: 0.94 — detecta el 94% de los casos reales de "No Churn".
+F1-score: 0.91 — excelente balance entre precisión y recall.
+Clase 1 (Churn):
+Precisión: 0.79 — acierta el 79% al predecir "Churn".
+Recall: 0.66 — captura el 66% de los casos reales de "Churn".
+F1-score: 0.72 — moderado, con espacio para mejorar recall.
+La precisión en validación fue 79.5%, indicando leve sobreajuste. El modelo destaca en identificar "No Churn", pero su recall para "Churn" (66%) sugiere dificultades para detectar todos los casos de abandono, posiblemente por desbalance de clases. Para mejorar, se podrían usar técnicas como SMOTE, optimización de hiperparámetros o análisis de importancia de características. Comparado con Deep-BP-ANN (88.12% de precisión), XGB es ligeramente inferior, pero más eficiente computacionalmente.
+
+![](imagenes/XGB_resultados.png)
+
+
 ## Modelo NB (Naive Bayes)
 
 Al utilizar el modelo NB se lograron resultados bastante similares a los del estudio, donde la presicion fue de 0.73%, con resultados notables:
