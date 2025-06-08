@@ -107,7 +107,7 @@ La matriz de confusión ayuda a ver si el modelo se equivoca más al predecir qu
 
 (True Negatives): 1010 — predijo correctamente que no se iba.
 
-#Métricas de evaluación
+# Métricas de evaluación
 
 Clase 0 (No churn):
 Precisión: 0.92  El modelo casi nunca se equivoca cuando predice que el cliente no se va.
@@ -141,6 +141,7 @@ Promedio de precisión: 79.86%
 Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.
 
 Aqui podemos ver los resultados de consola:
+
 ![](imagenes/BPANN_Basedatos4.png)
 
 ## Referencias
