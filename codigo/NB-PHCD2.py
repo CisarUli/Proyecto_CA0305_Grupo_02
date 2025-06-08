@@ -65,7 +65,8 @@ df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 df = df.dropna()
 
 # Convertir la variable objetivo 'Churn' a formato binario: 0 (No) y 1 (Yes)
-# df['Churn'] = df['Churn'].map({'No': 0, 'Yes': 1})
+#Esta linea se comenta debido a un cambio en la base de datos, por lo que ya no es necesaria
+# df['Churn'] = df['Churn'].map({'No': 0, 'Yes': 1}) 
 
 # Codificación de todas las variables categóricas
 # Excluimos 'Churn' porque ya está en formato binario y no necesita codificarse
