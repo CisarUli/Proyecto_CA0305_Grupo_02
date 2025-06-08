@@ -102,7 +102,7 @@ Recall: 0.85  Captura el 85% de los clientes que efectivamente se van.
 
 F1-score: 0.60  Moderadamente útil para detectar churn.
 
-![](imagenes/Restultados_NB_Basedatos4.png)
+![](imagenes/Resultados_NB_Basedatos4.jpeg)
 
 
 ## Modelo BPANN
@@ -120,7 +120,7 @@ Promedio de precisión: 79.86%
 Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.
 
 Aqui podemos ver los resultados de consola:
-![](imagenes/BPANN_resultados.png)
+![](imagenes/BPANN_Basedatos4.png)
 
 ## Referencias
 

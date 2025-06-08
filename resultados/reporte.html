@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.5.56" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-<meta name="author" content="Gerardo Montero, César Salazar, Oscar Espinoza, Andy Peralta" />
-<meta name="dcterms.date" content="2025-06-07" />
+<meta name="author" content="Gerardo Montero, César Salazar, Oscar Espinoza, Andy Peralta">
+<meta name="dcterms.date" content="2025-06-07">
 
 <title>Exploración más profunda del tema: Customer Churn Prediction</title>
 <style>
@@ -26,7 +24,17 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="reporte_files/libs/clipboard/clipboard.min.js"></script>
+<script src="reporte_files/libs/quarto-html/quarto.js"></script>
+<script src="reporte_files/libs/quarto-html/popper.min.js"></script>
+<script src="reporte_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="reporte_files/libs/quarto-html/anchor.min.js"></script>
+<link href="reporte_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="reporte_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="reporte_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="reporte_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="reporte_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -35,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-</div>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="reporte.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
@@ -70,18 +78,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="introducción" class="level2">
-<h2>Introducción</h2>
+<h2 class="anchored" data-anchor-id="introducción">Introducción</h2>
 <p>En el entorno competitivo de la industria de las telecomunicaciones, la retención de clientes se ha convertido en un desafío estratégico de primer orden. La capacidad para predecir cuándo un cliente podría abandonar un servicio —lo que se conoce como <em>customer churn</em>— representa una ventaja significativa en términos de optimización de campañas de retención, reducción de pérdidas económicas y fortalecimiento del valor de marca.</p>
 <p>En este contexto, el uso de modelos de predicción basados en técnicas de <em>Machine Learning</em> y <em>Deep Learning</em> ha ganado una gran relevancia en los últimos años debido a su capacidad para modelar grandes volúmenes de datos con una alta precisión.</p>
 <p>La presente bitácora se basa en la profundización de un estudio anterior centrado en la predicción de abandono de clientes utilizando aprendizaje profundo. El objetivo es investigar más a fondo la metodología empleada, identificar las técnicas más efectivas implementadas, y comprender cómo estas pueden ser replicadas o adaptadas para aplicaciones prácticas, como el desarrollo de un sistema propio basado en datos de clientes de telecomunicaciones.</p>
 <p>El estudio de referencia es el artículo <em>“Customer Churn Prediction in Telecommunication Industry Using Deep Learning”</em> (Fujo, Subramanian y Khder, 2022), el cual propone un enfoque robusto y replicable que servirá de base para la implementación futura del código y análisis del modelo.</p>
 </section>
 <section id="exploración" class="level2">
-<h2>Exploración</h2>
+<h2 class="anchored" data-anchor-id="exploración">Exploración</h2>
 <p>El artículo plantea la implementación de una red neuronal profunda con retropropagación (<em>Deep-BP-ANN</em>) como alternativa más efectiva frente a técnicas tradicionales como regresión logística, KNN, Naïve Bayes o XGBoost.</p>
 <p>El modelo fue entrenado y validado utilizando dos bases de datos ampliamente reconocidas en el área: <strong>IBM Telco</strong> y <strong>Cell2Cell</strong>, las cuales presentan escenarios reales de clientes y problemas típicos de desbalance de clases (entre clientes que permanecen y los que abandonan).</p>
 <section id="metodología" class="level3">
-<h3>Metodología</h3>
+<h3 class="anchored" data-anchor-id="metodología">Metodología</h3>
 <ul>
 <li><p><strong>Preprocesamiento de datos:</strong> Se aplicó imputación de valores faltantes, codificación de variables categóricas (label y one-hot encoding), y normalización de variables numéricas con varianza alta mediante <code>MinMaxScaler</code>.</p></li>
 <li><p><strong>Selección de características:</strong> Se usaron dos enfoques complementarios —Lasso Regression y Variance Thresholding— para eliminar atributos irrelevantes y mejorar la eficiencia del modelo.</p></li>
@@ -102,27 +110,27 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="resultados" class="level3">
-<h3>Resultados</h3>
+<h3 class="anchored" data-anchor-id="resultados">Resultados</h3>
 <p>Los resultados muestran que el modelo propuesto supera tanto a algoritmos tradicionales como a otros modelos de deep learning:</p>
 <ul>
 <li><strong>88.12% de exactitud</strong> en IBM Telco (holdout)</li>
 <li><strong>79.38% de exactitud</strong> en Cell2Cell</li>
 </ul>
 <p>Esto representa mejoras respecto a modelos ANN previos (80–85%).</p>
-<blockquote>
+<blockquote class="blockquote">
 <p>La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.</p>
 </blockquote>
 </section>
 <section id="gráficos" class="level3">
-<h3>Gráficos</h3>
-<p><img src="imagenes/grafica_01.png" class="img-fluid" /></p>
+<h3 class="anchored" data-anchor-id="gráficos">Gráficos</h3>
+<p><img src="imagenes/grafica_01.png" class="img-fluid"></p>
 <p><em>Fuente: Fujo, Subramanian y Khder (2022)</em></p>
-<p><img src="imagenes/grafica_02.png" class="img-fluid" /></p>
+<p><img src="imagenes/grafica_02.png" class="img-fluid"></p>
 <p><em>Fuente: Fujo, Subramanian y Khder (2022)</em></p>
 </section>
 </section>
 <section id="hallazgos-relevantes" class="level2">
-<h2>Hallazgos Relevantes</h2>
+<h2 class="anchored" data-anchor-id="hallazgos-relevantes">Hallazgos Relevantes</h2>
 <ul>
 <li>Las variables más influyentes en IBM Telco fueron el <strong>cargo total</strong> y la <strong>antigüedad del cliente</strong>.</li>
 <li>Se confirma que la calidad de las variables es más crítica que la cantidad de datos.</li>
@@ -130,10 +138,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 <section id="modelo-xgb" class="level2">
-<h2>Modelo XGB</h2>
+<h2 class="anchored" data-anchor-id="modelo-xgb">Modelo XGB</h2>
 </section>
 <section id="modelo-nb-naive-bayes" class="level2">
-<h2>Modelo NB (Naive Bayes)</h2>
+<h2 class="anchored" data-anchor-id="modelo-nb-naive-bayes">Modelo NB (Naive Bayes)</h2>
 <p>Al utilizar el modelo NB se lograron resultados bastante similares a los del estudio, donde la presicion fue de 0.73%, con resultados notables: La matriz de confusión ayuda a ver si el modelo se equivoca más al predecir que alguien no se va o que sí se va. (True Positives): 477 — predijo churn correctamente.</p>
 <p>(False Positives): 539 — dijo que se iba, pero no era cierto.</p>
 <p>(False Negatives): 84 — se fue, pero no lo detectó.</p>
@@ -145,28 +153,28 @@ ul.task-list li input[type="checkbox"] {
 <p>Clase 1 (Churn): Precisión: 0.47 Cuando predice que se va, solo el 47% es cierto.</p>
 <p>Recall: 0.85 Captura el 85% de los clientes que efectivamente se van.</p>
 <p>F1-score: 0.60 Moderadamente útil para detectar churn.</p>
-<p><img src="imagenes/Restultados_NB_Basedatos4.png" class="img-fluid" /></p>
+<p><img src="imagenes/Resultados_NB_Basedatos4.jpeg" class="img-fluid"></p>
 </section>
 <section id="modelo-bpann" class="level2">
-<h2>Modelo BPANN</h2>
+<h2 class="anchored" data-anchor-id="modelo-bpann">Modelo BPANN</h2>
 <p>Época final (epoch): 499 El entrenamiento se detuvo en la época 499, lo cual indica que se ejecutaron 499 ciclos completos de entrenamiento a través de todos los datos de entrada.</p>
 <p>Tasa de aprendizaje (learning rate): 0.300 Esta es la velocidad con la que el modelo ajusta sus pesos en cada iteración.</p>
 <p>Error final: 1713.518 Este valor representa el error acumulado al final del entrenamiento.</p>
 <p>Promedio de precisión: 79.86%</p>
 <p>Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.</p>
-<p>Aqui podemos ver los resultados de consola: <img src="imagenes/BPANN_resultados.png" class="img-fluid" /></p>
+<p>Aqui podemos ver los resultados de consola: <img src="imagenes/BPANN_Basedatos4.png" class="img-fluid"></p>
 </section>
 <section id="referencias" class="level2">
-<h2>Referencias</h2>
+<h2 class="anchored" data-anchor-id="referencias">Referencias</h2>
 <p>Fujo, S. W., Subramanian, S., &amp; Khder, M. A. (2022). <em>Customer churn prediction in telecommunication industry using deep learning</em>. Information Sciences Letters, 11(1), 185–198. <a href="https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24" class="uri">https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24</a></p>
 <p>DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 de junio de 2025 de https://www.datacamp.com/tutorial/naive-bayes-scikit-learn</p>
-<p>Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html</p>
+<p>Pedregosa, F., et al.&nbsp;(s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html</p>
 <p>Enlace a repositorio GitHub: https://github.com/CisarUli/Proyecto_CA0305_Grupo_02</p>
 </section>
 
 </main>
 <!-- /main column -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -588,6 +596,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>
