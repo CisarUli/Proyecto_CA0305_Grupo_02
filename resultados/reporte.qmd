@@ -72,6 +72,56 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 -   Se confirma que la calidad de las variables es más crítica que la cantidad de datos.
 -   El modelo Deep-BP-ANN superó a enfoques con CNN, ANN y *transfer learning*.
 
+## Modelo XGB
+
+## Modelo NB (Naive Bayes)
+
+Al utilizar el modelo NB se lograron resultados bastante similares a los del estudio, donde la presicion fue de 0.73%, con resultados notables:
+La matriz de confusión ayuda a ver si el modelo se equivoca más al predecir que alguien no se va o que sí se va.
+(True Positives): 477 — predijo churn correctamente.
+
+(False Positives): 539 — dijo que se iba, pero no era cierto.
+
+(False Negatives): 84 — se fue, pero no lo detectó.
+
+(True Negatives): 1010 — predijo correctamente que no se iba.
+
+#Métricas de evaluación
+
+Clase 0 (No churn):
+Precisión: 0.92  El modelo casi nunca se equivoca cuando predice que el cliente no se va.
+
+Recall: 0.65  Detecta el 65% de los que realmente no se van.
+
+F1-score: 0.76  Equilibrio entre precisión y recall.
+
+Clase 1 (Churn):
+Precisión: 0.47  Cuando predice que se va, solo el 47% es cierto.
+
+Recall: 0.85  Captura el 85% de los clientes que efectivamente se van.
+
+F1-score: 0.60  Moderadamente útil para detectar churn.
+
+![](imagenes/Restultados_NB_Basedatos4.png)
+
+
+## Modelo BPANN
+Época final (epoch): 499
+El entrenamiento se detuvo en la época 499, lo cual indica que se ejecutaron 499 ciclos completos de entrenamiento a través de todos los datos de entrada.
+
+Tasa de aprendizaje (learning rate): 0.300
+Esta es la velocidad con la que el modelo ajusta sus pesos en cada iteración. 
+
+Error final: 1713.518
+Este valor representa el error acumulado al final del entrenamiento. 
+
+Promedio de precisión: 79.86%
+
+Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.
+
+Aqui podemos ver los resultados de consola:
+![](imagenes/BPANN_resultados.png)
+
 ## Referencias
 
 Fujo, S. W., Subramanian, S., & Khder, M. A. (2022). *Customer churn prediction in telecommunication industry using deep learning*. Information Sciences Letters, 11(1), 185–198. <https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24>
