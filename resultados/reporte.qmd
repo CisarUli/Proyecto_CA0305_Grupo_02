@@ -1,7 +1,7 @@
 ---
 title: "Exploración más profunda del tema: Customer Churn Prediction"
 author: "Gerardo Montero, César Salazar, Oscar Espinoza, Andy Peralta"
-date: 2025-06-07
+date: today
 format:
   html: default
   pdf: default
