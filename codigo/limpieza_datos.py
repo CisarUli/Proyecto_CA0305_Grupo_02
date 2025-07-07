@@ -5,47 +5,131 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 class ClienteTelco:
+    """
+    Clase que representa un cliente de telecomunicaciones con información relevante 
+    para análisis de churn (abandono).
+
+    Atributos:
+        _cliente_id (int): Identificador único del cliente.
+        _tenure (int): Meses de permanencia del cliente.
+        _monthly_charge (float): Cargo mensual en dólares.
+        _churn (int): Indicador de cancelación (1 si se va, 0 si se queda).
+    """
+    
     def __init__(self, cliente_id, tenure, monthly_charge, churn):
+        """
+        Inicializa un objeto ClienteTelco con sus atributos.
+
+        Parametros:
+        ----------------
+            cliente_id (int): ID único del cliente.
+            tenure (int): Tiempo de permanencia en meses.
+            monthly_charge (float): Cargo mensual en dólares.
+            churn (int): 1 si el cliente se va, 0 si se queda.
+        """
         self._cliente_id = cliente_id
         self._tenure = tenure
         self._monthly_charge = monthly_charge
         self._churn = churn
 
     def __str__(self):
+        """
+        Retorna una representación en texto legible del objeto.
+
+        Returns:
+        -------------
+            str: Descripción del cliente con ID, estado, tenure y cargo mensual.
+        """
         estado = "Se va" if self._churn == 1 else "Se queda"
         return f"Cliente {self._cliente_id} - {estado} - Tenure: {self._tenure} meses - Cargo mensual: ${self._monthly_charge:.2f}"
 
     # Get y set para cada atributo
     @property
     def cliente_id(self):
+        """
+        Obtiene el ID del cliente.
+
+        Returns:
+        -----------------
+            int: ID del cliente.
+        """
         return self._cliente_id
 
     @cliente_id.setter
     def cliente_id(self, valor):
+         """
+        Establece un nuevo ID para el cliente.
+
+        Parametros:
+        -------------
+            valor (int): Nuevo ID del cliente.
+        """
         self._cliente_id = valor
 
     @property
     def tenure(self):
+        """
+        Obtiene el tiempo de permanencia del cliente.
+
+        Returns:
+        ----------------
+            int: Meses de permanencia.
+        """
         return self._tenure
 
     @tenure.setter
     def tenure(self, valor):
+        """
+        Establece un nuevo tiempo de permanencia.
+
+        Parametros:
+        ------------------
+            valor (int): Nuevos meses de permanencia.
+        """
         self._tenure = valor
 
     @property
     def monthly_charge(self):
+        """
+        Obtiene el cargo mensual del cliente.
+
+        Returns:
+        ----------------
+            float: Cargo mensual en dólares.
+        """
         return self._monthly_charge
 
     @monthly_charge.setter
     def monthly_charge(self, valor):
+        """
+        Establece un nuevo cargo mensual.
+
+        Parametros:
+        --------------
+            valor (float): Nuevo cargo mensual en dólares.
+        """
         self._monthly_charge = valor
 
     @property
     def churn(self):
+        """
+        Obtiene el estado de cancelación.
+
+        Returns:
+        ---------------
+            int: 1 si el cliente se va, 0 si se queda.
+        """
         return self._churn
 
     @churn.setter
     def churn(self, valor):
+        """
+        Establece un nuevo estado de cancelación.
+
+        Parametros:
+        ------------
+            valor (int): 1 si se va, 0 si se queda.
+        """
         self._churn = valor
 
 
