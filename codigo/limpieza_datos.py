@@ -10,10 +10,10 @@ class ClienteTelco:
     para análisis de churn (abandono).
 
     Atributos:
-        _cliente_id (int): Identificador único del cliente.
-        _tenure (int): Meses de permanencia del cliente.
-        _monthly_charge (float): Cargo mensual en dólares.
-        _churn (int): Indicador de cancelación (1 si se va, 0 si se queda).
+        cliente_id (int): Identificador único del cliente.
+        tenure (int): Meses de permanencia del cliente.
+        monthly_charge (float): Cargo mensual en dólares.
+        churn (int): Indicador de cancelación (1 si se va, 0 si se queda).
     """
     
     def __init__(self, cliente_id, tenure, monthly_charge, churn):
