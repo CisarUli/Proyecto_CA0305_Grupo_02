@@ -10,10 +10,10 @@ class ClienteTelco:
 
     Parametros
     -----------
-        _cliente_id (int): Identificador único del cliente.
-        _tenure (int): Tiempo (en meses) que el cliente ha estado con la empresa.
-        _monthly_charge (float): Cargo mensual en dólares.
-        _churn (int): Indicador de cancelación (1 = se va, 0 = se queda).
+        cliente_id (int): Identificador único del cliente.
+        tenure (int): Tiempo (en meses) que el cliente ha estado con la empresa.
+        monthly_charge (float): Cargo mensual en dólares.
+        churn (int): Indicador de cancelación (1 = se va, 0 = se queda).
     """
     def __init__(self, cliente_id, tenure, monthly_charge, churn):
         """
