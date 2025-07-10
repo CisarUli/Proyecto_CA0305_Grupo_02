@@ -1,3 +1,6 @@
+import sys
+sys.path.append('codigo/')
+
 from BPANN import BPANN
 from LimpiezaDatos import LimpiezaDatos
 from NB import NB
