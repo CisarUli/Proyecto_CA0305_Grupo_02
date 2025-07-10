@@ -15,7 +15,7 @@ class NB:
         test_size (float): Proporción de datos para prueba (default: 0.3).
         random_state (int): Semilla para reproducibilidad (default: 22).
     """
-    def __init__(self, X, y, test_size=0.3, random_state=22):
+    def __init__(self, X, y, test_size=0.3, random_state=42):
         """
         Inicializa la clase NB y divide el dataset.
 
