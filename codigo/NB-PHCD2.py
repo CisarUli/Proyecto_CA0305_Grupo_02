@@ -130,18 +130,18 @@ class ClienteTelco:
 
 
 # Cargar el dataset
-df = pd.read_csv("../datos/Telco-Customer-Churn4.csv")
+#df = pd.read_csv("../datos/Telco-Customer-Churn4.csv")
 
 # Eliminar columnas no útiles para el modelo
 # 'customerID' es un identificador que no aporta información predictiva
-if 'customerID' in df.columns:
-    df = df.drop(columns=['customerID'])
+#if 'customerID' in df.columns:
+  #  df = df.drop(columns=['customerID'])
 
 # Convertir 'TotalCharges' a numérico; si hay errores (como espacios vacíos), se convierten a NaN
-df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
+#df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
 
 # Eliminar filas con datos faltantes (NaN), por ejemplo, donde TotalCharges no se pudo convertir
-df = df.dropna()
+#df = df.dropna()
 
 # Convertir la variable objetivo 'Churn' a formato binario: 0 (No) y 1 (Yes)
 #Esta linea se comenta debido a un cambio en la base de datos, por lo que ya no es necesaria
@@ -149,22 +149,22 @@ df = df.dropna()
 
 # Codificación de todas las variables categóricas
 # Excluimos 'Churn' porque ya está en formato binario y no necesita codificarse
-df_encoded = pd.get_dummies(df.drop('Churn', axis=1))
+#df_encoded = pd.get_dummies(df.drop('Churn', axis=1))
 
 # Agregar de nuevo la variable objetivo al dataset codificado
-df_encoded['Churn'] = df['Churn']
+#df_encoded['Churn'] = df['Churn']
 
 
 # Separar variables predictoras (X) y variable objetivo (y)
-X = df_encoded.drop("Churn", axis=1)
-y = df_encoded["Churn"]
+#X = df_encoded.drop("Churn", axis=1)
+#y = df_encoded["Churn"]
 
 # Dividir el dataset en entrenamiento (70%) y prueba (30%)
 # random_state permite que los resultados sean reproducibles
 # stratify mantiene la proporción de clases igual en ambos conjuntos
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=22, stratify=y
-)
+#X_train, X_test, y_train, y_test = train_test_split(
+#    X, y, test_size=0.3, random_state=22, stratify=y
+#)
 
 # Crear el modelo Naive Bayes Gaussiano
 modelo = GaussianNB()
