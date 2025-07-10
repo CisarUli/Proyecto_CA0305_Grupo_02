@@ -15,17 +15,7 @@ class NB:
         test_size (float): Proporción de datos para prueba (default: 0.3).
         random_state (int): Semilla para reproducibilidad (default: 22).
     """
-    def __init__(self, X, y, test_size=0.3, random_state=42):
-        """
-        Inicializa la clase NB y divide el dataset.
 
-        Parametros:
-        -----------
-            X (DataFrame): Variables predictoras.
-            y (Series): Variable objetivo.
-            test_size (float): Proporción de prueba.
-            random_state (int): Semilla.
-        """
     def __init__(self, X, y, test_size=0.3, random_state=22):
         """
        Inicializa la clase NB y divide el dataset.
@@ -41,7 +31,7 @@ class NB:
         )
         self._modelo = GaussianNB()
         self._y_pred = None
-    self._accuracy = None
+        self._accuracy = None
 
     def entrenar(self):
         """
