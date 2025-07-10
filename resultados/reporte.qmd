@@ -160,6 +160,22 @@ Gupta, P. (2021). Comprehensive guide to artificial neural networks with Keras [
 
 
 
+Scikit-learn. (s.f.). Developing scikit-learn estimators. Scikit-learn. https://scikit-learn.org/stable/developers/develop.html
+
+XGBoost. (s.f.). Python package introduction. XGBoost. https://xgboost.readthedocs.io/en/stable/python/python_intro.html
+
+Jain, A. (2016, 17 de marzo). Complete guide to parameter tuning in XGBoost with codes in Python. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
+
+XGBoost. (s.f.). Introduction to boosted trees. XGBoost. https://xgboost.readthedocs.io/en/stable/tutorials/model.html
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785
+
+Techtonique. (2025, 1 de enero). Explaining XGBoost predictions with the Teller. Techtonique. https://www.techtonique.net/post/explaining-xgboost-predictions-teller/
+
+Brownlee, J. (s.f.). Gradient boosting with scikit-learn, XGBoost, LightGBM, and CatBoost. Machine Learning Mastery. https://machinelearningmastery.com/gradient-boosting-with-scikit-learn-xgboost-lightgbm-and-catboost/
+
+
+
 Enlace a repositorio GitHub: https://github.com/CisarUli/Proyecto_CA0305_Grupo_02
 
 
