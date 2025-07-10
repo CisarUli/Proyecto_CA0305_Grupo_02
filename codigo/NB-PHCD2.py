@@ -4,129 +4,144 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
-class ClienteTelco:
+class NB:
     """
-    Clase que representa un cliente de una empresa de telecomunicaciones.
+    Clase para entrenar y evaluar un modelo Naive Bayes Gaussiano sobre un dataset.
 
     Parametros
     -----------
-        cliente_id (int): Identificador único del cliente.
-        tenure (int): Tiempo (en meses) que el cliente ha estado con la empresa.
-        monthly_charge (float): Cargo mensual en dólares.
-        churn (int): Indicador de cancelación (1 = se va, 0 = se queda).
+        X (DataFrame): Variables predictoras.
+        y (Series): Variable objetivo binaria.
+        test_size (float): Proporción de datos para prueba (default: 0.3).
+        random_state (int): Semilla para reproducibilidad (default: 22).
     """
-    def __init__(self, cliente_id, tenure, monthly_charge, churn):
+    def __init__(self, X, y, test_size=0.3, random_state=22):
         """
-        Inicializa un nuevo objeto ClienteTelco.
+        Inicializa la clase NB y divide el dataset.
 
         Parametros:
         -----------
-            cliente_id (int): ID del cliente.
-            tenure (int): Meses de permanencia.
-            monthly_charge (float): Cargo mensual en dólares.
-            churn (int): Indicador de cancelación (1 o 0).
+            X (DataFrame): Variables predictoras.
+            y (Series): Variable objetivo.
+            test_size (float): Proporción de prueba.
+            random_state (int): Semilla.
         """
-        self._cliente_id = cliente_id
-        self._tenure = tenure
-        self._monthly_charge = monthly_charge
-        self._churn = churn
+        self._X_train, self._X_test, self._y_train, self._y_test = train_test_split(
+            X, y, test_size=test_size, random_state=random_state, stratify=y
+        )
+        self._modelo = GaussianNB()
+        self._y_pred = None
+        self._accuracy = None
+
+    def entrenar(self):
+        """
+        Entrena el modelo con los datos de entrenamiento.
+        """
+        self.modelo.fit(self.X_train, self.y_train)
+
+    def predecir(self):
+        """
+        Realiza predicciones sobre el conjunto de prueba.
+
+        Returns:
+        ----------
+            ndarray: Predicciones.
+        """
+        self.y_pred = self.modelo.predict(self.X_test)
+        return self.y_pred
+
+    def probar(self):
+        """
+        Entrena el modelo, predice y muestra métricas de evaluación.
+        """
+        self.entrenar()
+        self.predecir()
+
+        acc = accuracy_score(self.y_test, self.y_pred)
+        cm = confusion_matrix(self.y_test, self.y_pred)
+        report = classification_report(self.y_test, self.y_pred)
+
+        print(f"Accuracy: {acc:.4f}\n")
+        print("Matriz de confusión:")
+        print(cm)
+        print("\nReporte de clasificación:")
+        print(report)
+
 
     def __str__(self):
         """
-        Retorna una representación legible del cliente.
+        Retorna un resumen legible del modelo y resultados principales.
 
         Returns:
-        ---------------
-            str: Descripción del cliente con ID, estado, tenure y cargo mensual.
-        """
-        estado = "Se va" if self._churn == 1 else "Se queda"
-        return f"Cliente {self._cliente_id} - {estado} - Tenure: {self._tenure} meses - Cargo mensual: ${self._monthly_charge:.2f}"
-
-    # Get y set para cada atributo
-    @property
-    def cliente_id(self):
-        """
-        Obtiene el ID del cliente.
-
-        Returns:
-            int: ID del cliente.
-        """
-        return self._cliente_id
-
-    @cliente_id.setter
-    def cliente_id(self, valor):
-        """
-        Establece un nuevo ID para el cliente.
-
-        Paramteros:
-        -----------
-            valor (int): Nuevo ID del cliente.
-        """
-        self._cliente_id = valor
-
-    @property
-    def tenure(self):
-        """
-        Obtiene el tiempo de permanencia (tenure).
-
-        Returns:
-            int: Meses de permanencia.
-        """
-        return self._tenure
-
-    @tenure.setter
-    def tenure(self, valor):
-        """
-        Establece un nuevo tiempo de permanencia.
-
-        Parametros:
-        --------------
-            valor (int): Nuevos meses de permanencia.
-        """
-        self._tenure = valor
-
-    @property
-    def monthly_charge(self):
-        """
-        Obtiene el cargo mensual.
-
-        Returns:
-            float: Cargo mensual en dólares.
-        """
-        return self._monthly_charge
-
-    @monthly_charge.setter
-    def monthly_charge(self, valor):
-        """
-        Establece un nuevo cargo mensual.
-
-        Parametros_
-        ----------------
-            valor (float): Nuevo cargo mensual en dólares.
-        """
-        self._monthly_charge = valor
-
-    @property
-    def churn(self):
-        """
-        Obtiene el estado de cancelación.
-
-        Returns:
-            int: 1 si el cliente se va, 0 si se queda.
-        """
-        return self._churn
-
-    @churn.setter
-    def churn(self, valor):
-        """
-        Establece un nuevo estado de cancelación.
-
-        Parametros:
         ----------
-            valor (int): 1 si se va, 0 si se queda.
+            str: Resumen con accuracy y tamaños de conjuntos.
         """
-        self._churn = valor
+        resumen = (
+            f"Modelo Naive Bayes Gaussiano\n"
+            f" - Tamaño entrenamiento: {self.X_train.shape[0]} muestras\n"
+            f" - Tamaño prueba: {self.X_test.shape[0]} muestras\n"
+        )
+        if self.accuracy is not None:
+            resumen += f" - Accuracy actual: {self.accuracy:.4f}\n"
+        else:
+            resumen += " - Modelo aún no ha sido probado.\n"
+        return resumen
+        
+    @property
+    def X_train(self):
+        return self._X_train
 
+    @X_train.setter
+    def X_train(self, valor):
+        self._X_train = valor
+
+    @property
+    def X_test(self):
+        return self._X_test
+
+    @X_test.setter
+    def X_test(self, valor):
+        self._X_test = valor
+
+    @property
+    def y_train(self):
+        return self._y_train
+
+    @y_train.setter
+    def y_train(self, valor):
+        self._y_train = valor
+
+    @property
+    def y_test(self):
+        return self._y_test
+
+    @y_test.setter
+    def y_test(self, valor):
+        self._y_test = valor
+
+    @property
+    def modelo(self):
+        return self._modelo
+
+    @modelo.setter
+    def modelo(self, valor):
+        self._modelo = valor
+
+    @property
+    def y_pred(self):
+        return self._y_pred
+
+    @y_pred.setter
+    def y_pred(self, valor):
+        self._y_pred = valor
+
+    @property
+    def accuracy(self):
+        return self._accuracy
+
+    @accuracy.setter
+    def accuracy(self, valor):
+        self._accuracy = valor
 
 
 # Cargar el dataset
