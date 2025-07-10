@@ -26,12 +26,22 @@ class NB:
             test_size (float): Proporción de prueba.
             random_state (int): Semilla.
         """
-        self._X_train, self._X_test, self._y_train, self._y_test = train_test_split(
-            X, y, test_size=test_size, random_state=random_state, stratify=y
-        )
-        self._modelo = GaussianNB()
-        self._y_pred = None
-        self._accuracy = None
+def __init__(self, X, y, test_size=0.3, random_state=22):
+    """
+   Inicializa la clase NB y divide el dataset.
+    Parametros:
+    -----------
+    X (DataFrame): Variables predictoras.
+    y (Series): Variable objetivo.
+    test_size (float): Proporción de prueba.
+    random_state (int): Semilla.
+    """
+    self._X_train, self._X_test, self._y_train, self._y_test = train_test_split(
+        X, y, test_size=test_size, random_state=random_state, stratify=y
+    )
+    self._modelo = GaussianNB()
+    self._y_pred = None
+    self._accuracy = None
 
     def entrenar(self):
         """
