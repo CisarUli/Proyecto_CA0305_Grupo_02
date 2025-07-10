@@ -152,6 +152,14 @@ DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 
 
 Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html
 
+
+Simplilearn. (s.f.). What is Epoch in Machine Learning? Simplilearn. https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning
+
+
+Gupta, P. (2021). Comprehensive guide to artificial neural networks with Keras [Notebook]. Kaggle. https://www.kaggle.com/code/prashant111/comprehensive-guide-to-ann-with-keras/notebook
+
+
+
 Enlace a repositorio GitHub: https://github.com/CisarUli/Proyecto_CA0305_Grupo_02
 
 
