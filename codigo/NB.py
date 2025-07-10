@@ -5,17 +5,6 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 
 class NB:
-    """
-    Clase para entrenar y evaluar un modelo Naive Bayes Gaussiano sobre un dataset.
-
-    Parametros
-    -----------
-        X (DataFrame): Variables predictoras.
-        y (Series): Variable objetivo binaria.
-        test_size (float): Proporción de datos para prueba (default: 0.3).
-        random_state (int): Semilla para reproducibilidad (default: 22).
-    """
-
     def __init__(self, X, y, test_size=0.1, random_state=42):
         """
        Inicializa la clase NB y divide el dataset.
