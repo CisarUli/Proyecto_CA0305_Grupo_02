@@ -54,6 +54,7 @@ class NB:
         """
         Entrena el modelo, predice y muestra métricas de evaluación.
         """
+        
         self.entrenar()
         self.predecir()
 
@@ -86,7 +87,8 @@ class NB:
         else:
             resumen += " - Modelo aún no ha sido probado.\n"
         return resumen
-        
+
+    #Getters y setters de la clase
     @property
     def X_train(self):
         return self._X_train
