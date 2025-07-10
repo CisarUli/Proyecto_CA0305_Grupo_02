@@ -31,7 +31,7 @@ class XGBModel:
         load(ruta): Carga un modelo desde un archivo.
     """
 
-    def __init__(self, params=None, test_size=0.3, random_state=42):
+    def __init__(self, params=None, test_size=0.1, random_state=42):
         """
         Inicializa una instancia de la clase XGBModel con hiperparámetros y configuración.
 
