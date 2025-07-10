@@ -182,20 +182,20 @@ class NB:
 #)
 
 # Crear el modelo Naive Bayes Gaussiano
-modelo = GaussianNB()
+#modelo = GaussianNB()
 
 # Entrenar el modelo con los datos de entrenamiento
-modelo.fit(X_train, y_train)
+#modelo.fit(X_train, y_train)
 
 # Predecir los valores con el conjunto de prueba
-y_pred = modelo.predict(X_test)
+#y_pred = modelo.predict(X_test)
 
 
 # Mostrar la exactitud del modelo (accuracy): porcentaje de aciertos
-print("Accuracy:", accuracy_score(y_test, y_pred))
+#print("Accuracy:", accuracy_score(y_test, y_pred))
 
 # Mostrar la matriz de confusión: permite analizar errores y aciertos por clase
-print("\nMatriz de confusión:")
+#print("\nMatriz de confusión:")
 
 #Ayuda a ver si el modelo se equivoca más al predecir que alguien no se va o que sí se va.
 #(True Positives): 477 — predijo churn correctamente.
@@ -206,10 +206,10 @@ print("\nMatriz de confusión:")
 
 #(True Negatives): 1010 — predijo correctamente que no se iba.
 
-print(confusion_matrix(y_test, y_pred))
+#print(confusion_matrix(y_test, y_pred))
 
 # Mostrar métricas de evaluación por clase: precisión, recall y F1-score
-print("\nReporte de clasificación:")
+#print("\nReporte de clasificación:")
 
 #Clase 0 (No churn):
 #Precisión: 0.92  El modelo casi nunca se equivoca cuando predice que el cliente no se va.
@@ -225,7 +225,7 @@ print("\nReporte de clasificación:")
 
 #F1-score: 0.60  Moderadamente útil para detectar churn.
 
-print(classification_report(y_test, y_pred))
+#print(classification_report(y_test, y_pred))
 
 
 #informacion de como hacerlo de:
