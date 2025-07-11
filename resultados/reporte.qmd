@@ -1,4 +1,4 @@
----
+   ---
 title: "Reporte: Replicación de resultados a Customer Churn Prediction"
 author: "Gerardo Andrés Montero, César Salazar, Oscar Espinoza, Andy Peralta"
 date: today
@@ -183,65 +183,45 @@ Aqui podemos ver los resultados:
 
 ## Fortalezas
 
--   **Metodología sólida y bien documentada**: El proyecto se basa en un estudio académico robusto (Fujo et al., 2022) y utiliza el dataset reconocido IBM Telco, lo que garantiza una base confiable y replicable.
+-   **Metodología robusta y documentada**: El proyecto se basa en un enfoque académico sólido, inspirado en estudios como Fujo et al. (2022), y utiliza datasets reconocidos como IBM Telco y Cell2Cell. Esto asegura una base confiable y facilita la reproducibilidad de los resultados.
 
--   **Uso de técnicas avanzadas de Machine Learning**: La implementación del modelo Deep-BP-ANN, optimizado con *Early Stopping* y *Activity Regularization*, logra una alta precisión (88.12% en IBM Telco), superando a modelos tradicionales.
+-   **Uso de técnicas avanzadas**: El modelo Deep-BP-ANN, optimizado con *Early Stopping* y *Activity Regularization*, logra una precisión destacada del 88.12% en IBM Telco, superando a modelos tradicionales como XGBoost y Naive Bayes.
 
--   **Análisis comparativo exhaustivo**: La evaluación de múltiples modelos (XGB: 81%, NB: 76%, BPANN: 77%) con métricas claras (Accuracy, Precision, Recall, F1-Score, AUC) permite una comparación objetiva y fundamentada.
+-   **Evaluación comparativa completa**: Se analizaron múltiples modelos (XGB con 81%, NB con 76%, BPANN con 77%) utilizando métricas claras como Accuracy, Precision, Recall y F1-Score, lo que permite una comparación objetiva de su rendimiento.
 
--   **Tratamiento efectivo del desbalance de clases**: El uso de *Random Oversampling* mejora la predicción de la clase minoritaria (*churn*), crucial para aplicaciones prácticas.
+-   **Manejo del desbalance de clases**: La aplicación de *Random Oversampling* mejora la capacidad de los modelos para detectar casos de abandono (*churn*), un aspecto crítico dado el desbalance de clases (26–29% de *churn*).
 
--   **Selección de características optimizada**: La combinación de *Lasso Regression* y *Variance Thresholding* elimina variables irrelevantes, aumentando la eficiencia y precisión del modelo.
+-   **Selección eficiente de variables**: Mediante *Lasso Regression* y *Variance Thresholding*, se identificaron variables clave como el cargo total y la antigüedad del cliente, optimizando la precisión y reduciendo la complejidad del modelo.
 
--   **Replicabilidad y transparencia**: La disponibilidad del código en un repositorio GitHub y la documentación detallada facilita la adaptación del proyecto a otros contextos.
-
--   **Identificación de variables clave**: La determinación de variables predictoras críticas, como el *cargo total* y la *antigüedad del cliente*, proporciona *insights* accionables para estrategias de retención.
+-   **Transparencia y accesibilidad**: El código está disponible en un repositorio de GitHub, y la documentación detallada permite que otros puedan entender y replicar el trabajo.
 
 ## Oportunidades
 
--   **Aplicación práctica en telecomunicaciones**: Los modelos predictivos pueden implementarse en empresas reales para optimizar campañas de retención, reduciendo el *churn* y mejorando la rentabilidad.
+-   **Aplicación práctica en telecomunicaciones**: Los modelos desarrollados pueden implementarse en empresas del sector para optimizar estrategias de retención de clientes, reduciendo el abandono y mejorando la rentabilidad.
 
--   **Escalabilidad a otros sectores**: La metodología es adaptable a industrias con problemas similares, como banca, seguros o comercio electrónico, ampliando su impacto.
+-   **Colaboración interdisciplinaria**: Trabajar con equipos de marketing o expertos en el negocio podría alinear mejor los modelos con las necesidades prácticas de las empresas, maximizando su impacto.
 
--   **Adopción de técnicas avanzadas**: Incorporar métodos como SMOTE, optimización de hiperparámetros o *ensemble learning* puede mejorar aún más el rendimiento de los modelos.
-
--   **Acceso a datasets más diversos**: Utilizar datasets más grandes o actualizados, como datos en tiempo real de empresas, puede mejorar la generalización de los modelos.
-
--   **Infraestructura computacional avanzada**: Con acceso a mayor poder computacional (por ejemplo, GPUs o servicios en la nube), se podrían explorar arquitecturas más complejas o entrenamientos prolongados.
-
--   **Colaboración interdisciplinaria**: Asociarse con expertos en ciencia de datos, marketing o dominio del negocio puede enriquecer el análisis y la aplicación práctica de los resultados.
-
--   **Integración con tecnologías emergentes**: Incorporar herramientas como *AutoML* o modelos basados en *transformers* podría modernizar el enfoque y mejorar la competitividad.
+-   **Uso de infraestructura avanzada**: Acceder a mayor capacidad computacional, como GPUs, permitiría entrenar modelos más complejos o acelerar el proceso, mejorando la eficiencia.
 
 ## Debilidades
 
--   **Limitaciones computacionales**: El modelo Deep-BP-ANN requiere alto consumo de recursos (energía, tiempo, dinero), lo que dificulta su implementación en entornos con infraestructura limitada.
+-   **Alto costo computacional**: El modelo Deep-BP-ANN requiere recursos significativos (energía, tiempo y dinero), lo que puede limitar su implementación en entornos con infraestructura restringida.
 
--   **Desempeño inferior de modelos alternativos**: Los modelos XGB (81%) y NB (76%) son menos precisos que el Deep-BP-ANN (88.12%), lo que limita las opciones en escenarios con restricciones computacionales.
+-   **Rendimiento limitado de modelos alternativos**: Los modelos XGBoost (81%), Naive Bayes (76%) y BPANN (77%) son menos precisos que el Deep-BP-ANN (88.12%), lo que reduce las opciones en escenarios donde los recursos son limitados.
 
--   **Dependencia de la calidad de los datos**: La efectividad del modelo depende de datos limpios y relevantes, y datasets ruidosos o incompletos podrían reducir su precisión.
+-   **Dependencia de la calidad de los datos**: Los resultados dependen de datos limpios y bien estructurados; datos ruidosos o incompletos podrían afectar negativamente el desempeño de los modelos.
 
--   **Falta de optimización exhaustiva de hiperparámetros**: La ausencia de un análisis detallado de hiperparámetros puede estar limitando el rendimiento óptimo de los modelos.
+-   **Recall moderado en la clase *churn***: En el modelo BPANN, el *recall* para la clase *churn* es de 0.70, lo que implica que algunos casos de abandono podrían no detectarse, un aspecto crítico para aplicaciones prácticas.
 
--   **Recall moderado en la clase Churn para BPANN**: Con un recall de 0.70 para la clase *Churn*, el modelo BPANN podría omitir casos de abandono, lo que es crítico para aplicaciones prácticas.
-
--   **Falta de validación en datasets externos**: Los modelos se probaron en IBM Telco y Cell2Cell, pero no se validaron en otros datasets, lo que podría limitar su generalización.
-
--   **Documentación limitada sobre implementación práctica**: Aunque el código está disponible, no se detalla cómo implementar los modelos en un entorno real de telecomunicaciones.
+-   **Documentación práctica limitada**: Aunque el proyecto está bien documentado técnicamente, falta detalle sobre cómo implementar los modelos en un entorno real de telecomunicaciones, lo que podría dificultar su adopción.
 
 ## Amenazas
 
--   **Competencia tecnológica**: Otras empresas pueden estar desarrollando modelos más avanzados (por ejemplo, basados en *transformers* o *ensemble learning*), superando los resultados del proyecto.
+-   **Obsolescencia tecnológica**: El campo del *Deep Learning* evoluciona rápidamente, y el modelo Deep-BP-ANN podría quedar desactualizado frente a nuevas metodologías.
 
--   **Obsolescencia tecnológica**: Las técnicas de *Deep Learning* evolucionan rápidamente, y el enfoque Deep-BP-ANN podría quedar desactualizado frente a nuevos paradigmas.
+-   **Restricciones de datos**: Regulaciones de privacidad, como el GDPR (General Data Protection Regulation), podrían limitar el acceso a datos reales de clientes, afectando la capacidad de entrenar o actualizar los modelos.
 
--   **Restricciones de datos**: Regulaciones de privacidad (como GDPR) pueden limitar el acceso a datos reales de clientes, afectando la escalabilidad del modelo.
-
--   **Costo de implementación**: La adopción de modelos como Deep-BP-ANN en entornos reales requiere inversión en infraestructura y mantenimiento, lo que puede ser prohibitivo.
-
--   **Riesgo de sobreajuste**: A pesar de técnicas como *Early Stopping*, los modelos podrían no generalizar bien en datasets con distribuciones diferentes a las utilizadas.
-
--   **Expectativas del mercado**: Las empresas pueden esperar resultados más rápidos o modelos más simples, lo que podría dificultar la adopción de enfoques complejos como Deep-BP-ANN.
+-   **Costo de implementación**: La adopción del modelo Deep-BP-ANN en entornos reales requiere una inversión significativa en infraestructura, lo que podría ser un obstáculo para algunas empresas.
 
 # Conclusiones y recomendaciones
 
