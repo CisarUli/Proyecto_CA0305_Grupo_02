@@ -181,6 +181,8 @@ Aqui podemos ver los resultados:
 
 # Analisis FODA
 
+# Conclusiones y recomendaciones
+
 # Referencias
 
 Fujo, S. W., Subramanian, S., & Khder, M. A. (2022). *Customer churn prediction in telecommunication industry using deep learning*. Information Sciences Letters, 11(1), 185–198. <https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24>
