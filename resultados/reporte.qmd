@@ -180,11 +180,9 @@ Aqui podemos ver los resultados:
 |          Final          |    0.77   |       |          |
 
 # Analisis FODA
-Fortalezas
+## Fortalezas
 
 Metodología sólida y bien documentada: El proyecto se basa en un estudio académico robusto (Fujo et al., 2022), utilizando datasets reconocidos como IBM Telco y Cell2Cell, lo que asegura una base confiable para la replicación.
-
-
 
 Uso de técnicas avanzadas de Machine Learning: La implementación de un modelo Deep-BP-ANN con optimizaciones como Early Stopping y Activity Regularization demuestra un enfoque moderno y efectivo, con resultados superiores (88.12% de exactitud en IBM Telco).
 
@@ -204,7 +202,7 @@ Selección de características optimizada: La combinación de Lasso Regression y
 
 Replicabilidad práctica: El proyecto incluye referencias claras al código (repositorio GitHub) y a las técnicas empleadas, lo que facilita su adaptación a otros contextos de telecomunicaciones.
 
-Oportunidades
+## Oportunidades
 
 
 
@@ -232,7 +230,7 @@ Uso de infraestructura computacional avanzada: Con mayor poder computacional, se
 
 Colaboración interdisciplinaria: Asociarse con expertos en ciencia de datos o dominio del negocio podría enriquecer el análisis de variables predictoras y su impacto en la retención.
 
-Debilidades
+## Debilidades
 
 
 
@@ -256,7 +254,7 @@ Falta de análisis de hiperparámetros detallado: Aunque se mencionan optimizaci
 
 Recall moderado en la clase Churn para BPANN: Con un recall de 0.70 para la clase Churn, el modelo BPANN podría estar omitiendo algunos casos de abandono, lo que es crítico en aplicaciones prácticas.
 
-Amenazas
+## Amenazas
 
 
 
