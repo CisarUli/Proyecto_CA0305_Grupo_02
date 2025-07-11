@@ -1,4 +1,4 @@
-   ---
+---
 title: "Reporte: Replicación de resultados a Customer Churn Prediction"
 author: "Gerardo Andrés Montero, César Salazar, Oscar Espinoza, Andy Peralta"
 date: today
