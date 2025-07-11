@@ -8,7 +8,7 @@ format:
 
 ---
 
-## Introducción
+# Introducción
 
 En el entorno competitivo de la industria de las telecomunicaciones, la retención de clientes se ha convertido en un desafío estratégico de primer orden. La capacidad para predecir cuándo un cliente podría abandonar un servicio —lo que se conoce como *customer churn*— representa una ventaja significativa en términos de optimización de campañas de retención, reducción de pérdidas económicas y fortalecimiento del valor de marca.
 
@@ -18,13 +18,13 @@ La presente bitácora se basa en la profundización de un estudio anterior centr
 
 El estudio de referencia es el artículo *“Customer Churn Prediction in Telecommunication Industry Using Deep Learning”* (Fujo, Subramanian y Khder, 2022), el cual propone un enfoque robusto y replicable que servirá de base para la implementación futura del código y análisis del modelo.
 
-## Exploración
+# Exploración
 
 El artículo plantea la implementación de una red neuronal profunda con retropropagación (*Deep-BP-ANN*) como alternativa más efectiva frente a técnicas tradicionales como regresión logística, KNN, Naïve Bayes o XGBoost.
 
 El modelo fue entrenado y validado utilizando dos bases de datos ampliamente reconocidas en el área: **IBM Telco** y **Cell2Cell**, las cuales presentan escenarios reales de clientes y problemas típicos de desbalance de clases (entre clientes que permanecen y los que abandonan).
 
-### Metodología
+# Metodología
 
 -   **Preprocesamiento de datos:** Se aplicó imputación de valores faltantes, codificación de variables categóricas (label y one-hot encoding), y normalización de variables numéricas con varianza alta mediante `MinMaxScaler`.
 
@@ -45,7 +45,7 @@ El modelo fue entrenado y validado utilizando dos bases de datos ampliamente rec
     -   F1-Score
     -   AUC
 
-### Resultados
+# Resultados
 
 Los resultados muestran que el modelo propuesto supera tanto a algoritmos tradicionales como a otros modelos de deep learning:
 
@@ -56,7 +56,7 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 
 > La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.
 
-### Gráficos
+## Gráficos
 
 ![](imagenes/grafica_01.png)
 
@@ -72,7 +72,7 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 -   Se confirma que la calidad de las variables es más crítica que la cantidad de datos.
 -   El modelo Deep-BP-ANN superó a enfoques con CNN, ANN y *transfer learning*.
 
-## Modelo XGB
+### Modelo XGB
 
 El modelo XGB, implementado en Python con la librería xgboost, presentó el siguiente desempeño:
 
@@ -105,7 +105,7 @@ Para mejorar, se podrían usar técnicas como SMOTE, optimización de hiperpará
 |           Final           |    0.81   |       |          |
 
 
-## Modelo NB (Naive Bayes)
+### Modelo NB (Naive Bayes)
 
 La matriz de confusión nos permite analizar en detalle el desempeño:
 
@@ -117,7 +117,7 @@ False Negatives : 100 — Predijo que el cliente no se iba, pero sí se fue.
 
 True Positives : 417 — Predijo correctamente que el cliente se iba (clase 1).
 
-# Métricas de evaluación
+#### Métricas de evaluación
 
 Clase 0 (No churn):
 Precisión: 0.79  El modelo se equivoca poco cuando predice que el cliente no se va.
@@ -142,14 +142,14 @@ F1-score: 0.77  Moderadamente útil para detectar churn.
 
 
 
-## Modelo BPANN
+### Modelo BPANN
 Época final (epoch): Variable, entre 60 y 160.
 El entrenamiento se detuvo entre los 60 y 160 cicloscompletos de entrenamiento a través de todos los datos de entrada, deteniendose cuando el error dejara de disminuir.
 
 Error final promedio: 0.36%
 Este valor representa el error acumulado al final del entrenamiento. 
 
-Métricas de evaluación:
+#### Métricas de evaluación:
 Clase 0 (No Churn):
 
 Precisión: 0.74 — acierta el 74 % al predecir "No Churn".
@@ -179,9 +179,9 @@ Aqui podemos ver los resultados:
 |            1            |    0.81   |  0.70 |   0.75   |
 |          Final          |    0.77   |       |          |
 
-### Analisis FODA
+# Analisis FODA
 
-## Referencias
+# Referencias
 
 Fujo, S. W., Subramanian, S., & Khder, M. A. (2022). *Customer churn prediction in telecommunication industry using deep learning*. Information Sciences Letters, 11(1), 185–198. <https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24>
 
