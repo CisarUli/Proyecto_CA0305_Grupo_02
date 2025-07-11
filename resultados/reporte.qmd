@@ -182,6 +182,7 @@ Aqui podemos ver los resultados:
 # Analisis FODA
 
 # Conclusiones y recomendaciones
+> La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.
 
 # Referencias
 
