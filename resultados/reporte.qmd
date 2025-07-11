@@ -74,73 +74,74 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 
 ## Modelo XGB
 
-El modelo XGB, implementado con Python y xgboost mostró el siguiente desempeño:
-
-True Positives: 639 — predijo correctamente "Churn".
-False Positives: 172 — predijo "Churn" incorrectamente.
-False Negatives: 289 — no detectó "Churn".
-True Negatives: 5002 — predijo correctamente "No Churn".
 Métricas de evaluación:
-
 Clase 0 (No Churn):
-Precisión: 0.88 — acierta el 88% al predecir "No Churn".
-Recall: 0.94 — detecta el 94% de los casos reales de "No Churn".
-F1-score: 0.91 — excelente balance entre precisión y recall.
+
+Precisión: 0.91 — acierta el 91 % al predecir "No Churn".
+
+Recall: 0.82 — detecta el 82 % de los casos reales de "No Churn".
+
+F1-score: 0.86 — buen equilibrio entre precisión y recall.
+
 Clase 1 (Churn):
-Precisión: 0.79 — acierta el 79% al predecir "Churn".
-Recall: 0.66 — captura el 66% de los casos reales de "Churn".
-F1-score: 0.72 — moderado, con espacio para mejorar recall.
-La precisión en validación fue 79.5%, indicando leve sobreajuste. El modelo destaca en identificar "No Churn", pero su recall para "Churn" (66%) sugiere dificultades para detectar todos los casos de abandono, posiblemente por desbalance de clases. Para mejorar, se podrían usar técnicas como SMOTE, optimización de hiperparámetros o análisis de importancia de características. Comparado con Deep-BP-ANN (88.12% de precisión), XGB es ligeramente inferior, pero más eficiente computacionalmente.
+
+Precisión: 0.84 — acierta el 84 % al predecir "Churn".
+
+Recall: 0.92 — identifica el 92 % de los casos reales de "Churn".
+
+F1-score: 0.88 — muestra un excelente balance, destacando la capacidad del modelo para detectar clientes que efectivamente se van.
+
+Este modelo terminó con un 0.87 de accuracy, por lo que vemos un resultado similar al del estudio.
+
+Para mejorar, se podrían usar técnicas como SMOTE, optimización de hiperparámetros o análisis de importancia de características. Comparado con el Deep-BP-ANN del papper(88.12% de precisión), XGB es ligeramente inferior, pero más eficiente computacionalmente.
 
 ![](imagenes/XGB_resultados.png)
 
 
 ## Modelo NB (Naive Bayes)
 
-Al utilizar el modelo NB se lograron resultados bastante similares a los del estudio, donde la presicion fue de 0.73%, con resultados notables:
-La matriz de confusión ayuda a ver si el modelo se equivoca más al predecir que alguien no se va o que sí se va.
-(True Positives): 477 — predijo churn correctamente.
+La matriz de confusión nos permite analizar en detalle el desempeño:
 
-(False Positives): 539 — dijo que se iba, pero no era cierto.
+True Negatives : 369 — Predijo correctamente que el cliente no se iba (clase 0).
 
-(False Negatives): 84 — se fue, pero no lo detectó.
+False Positives : 149 — Predijo que el cliente se iba, pero en realidad no se fue.
 
-(True Negatives): 1010 — predijo correctamente que no se iba.
+False Negatives : 100 — Predijo que el cliente no se iba, pero sí se fue.
+
+True Positives : 417 — Predijo correctamente que el cliente se iba (clase 1).
 
 # Métricas de evaluación
 
 Clase 0 (No churn):
-Precisión: 0.92  El modelo casi nunca se equivoca cuando predice que el cliente no se va.
+Precisión: 0.79  El modelo se equivoca poco cuando predice que el cliente no se va.
 
-Recall: 0.65  Detecta el 65% de los que realmente no se van.
+Recall: 0.71  Detecta el 71% de los que realmente no se van.
 
-F1-score: 0.76  Equilibrio entre precisión y recall.
+F1-score: 0.75  Equilibrio entre precisión y recall.
 
 Clase 1 (Churn):
-Precisión: 0.47  Cuando predice que se va, solo el 47% es cierto.
+Precisión: 0.74  Cuando predice que se va, solo el 74% es cierto.
 
-Recall: 0.85  Captura el 85% de los clientes que efectivamente se van.
+Recall: 0.81  Captura el 81% de los clientes que efectivamente se van.
 
-F1-score: 0.60  Moderadamente útil para detectar churn.
+F1-score: 0.77  Moderadamente útil para detectar churn.
 
 ![](imagenes/Resultados_NB_Basedatos4.jpeg)
 
 
 ## Modelo BPANN
-Época final (epoch): 499
-El entrenamiento se detuvo en la época 499, lo cual indica que se ejecutaron 499 ciclos completos de entrenamiento a través de todos los datos de entrada.
+Época final (epoch): Variable, entre 60 y 160.
+El entrenamiento se detuvo entre los 60 y 160 cicloscompletos de entrenamiento a través de todos los datos de entrada, deteniendose cuando el error dejara de disminuir.
 
-Tasa de aprendizaje (learning rate): 0.300
-Esta es la velocidad con la que el modelo ajusta sus pesos en cada iteración. 
 
-Error final: 1713.518
+Error final promedio: 0.36%
 Este valor representa el error acumulado al final del entrenamiento. 
 
-Promedio de precisión: 79.86%
+Promedio de precisión: 77%
 
 Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.
 
-Aqui podemos ver los resultados de consola:
+Aqui podemos ver los resultados:
 
 ![](imagenes/BPANN_Basedatos4.png)
 
