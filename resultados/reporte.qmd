@@ -207,7 +207,7 @@ Aqui podemos ver los resultados:
 
 -   **Alto costo computacional**: El modelo Deep-BP-ANN requiere recursos significativos (energía, tiempo y dinero), lo que puede limitar su implementación en entornos con infraestructura restringida.
 
--   **Rendimiento limitado de modelos alternativos**: Los modelos XGBoost (81%), Naive Bayes (76%) y BPANN (77%) son menos precisos que el Deep-BP-ANN (88.12%), lo que reduce las opciones en escenarios donde los recursos son limitados.
+-   **Rendimiento limitado de modelos alternativos**: Los modelos XGBoost (81%), Naive Bayes (76%) y BPANN (77%) son menos precisos que el Deep-BP-ANN (88.12%) del estudio original, lo que reduce las opciones en escenarios donde los recursos son limitados.
 
 -   **Dependencia de la calidad de los datos**: Los resultados dependen de datos limpios y bien estructurados; datos ruidosos o incompletos podrían afectar negativamente el desempeño de los modelos.
 
