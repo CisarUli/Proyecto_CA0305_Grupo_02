@@ -141,6 +141,7 @@ F1-score: 0.77  Moderadamente útil para detectar churn.
 |         Final        |    0.76   |       |          |
 
 
+
 ## Modelo BPANN
 Época final (epoch): Variable, entre 60 y 160.
 El entrenamiento se detuvo entre los 60 y 160 cicloscompletos de entrenamiento a través de todos los datos de entrada, deteniendose cuando el error dejara de disminuir.
