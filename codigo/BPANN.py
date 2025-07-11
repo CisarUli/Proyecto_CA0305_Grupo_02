@@ -78,7 +78,7 @@ class BPANN:
         
         """
         early_stop = EarlyStopping(monitor = 'val_loss', 
-                                   patience = 150,
+                                   patience = 50,
                                    restore_best_weights = True
                                    )
         checkpoint = ModelCheckpoint('best_model.h5', 
