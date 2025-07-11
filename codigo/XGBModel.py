@@ -120,14 +120,14 @@ class XGBModel:
         la exactitud en el conjunto de validación.
 
         Argumentos:
- |           X (pandas.DataFrame): Características de los datos.
+            X (pandas.DataFrame): Características de los datos.
             y (pandas.Series): Etiquetas de los datos.
 
         Retorna:
             XGBModel: El objeto XGBModel entrenado.
 
         Excepciones:
-███ValueError: Si X o y están vacíos o no son del tipo esperado.
+            ValueError: Si X o y están vacíos o no son del tipo esperado.
         """
         if X.empty or y.empty:
             raise ValueError("Los datos X e y no pueden estar vacíos.")
@@ -186,6 +186,7 @@ class XGBModel:
             raise ValueError("Los datos X e y no pueden estar vacíos.")
         if not isinstance(X, pd.DataFrame) or not isinstance(y, pd.Series):
             raise ValueError("X debe ser un DataFrame y y una Series de pandas.")
+        self.entrenar(X, y)
         preds = self.predecir(X)
         print(classification_report(y, preds))
         return accuracy_score(y, preds)
