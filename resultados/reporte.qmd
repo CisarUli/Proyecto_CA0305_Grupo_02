@@ -185,31 +185,31 @@ Aqui podemos ver los resultados:
 
 Fujo, S. W., Subramanian, S., & Khder, M. A. (2022). *Customer churn prediction in telecommunication industry using deep learning*. Information Sciences Letters, 11(1), 185–198. <https://digitalcommons.aaru.edu.jo/isl/vol11/iss1/24>
 
-DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 de junio de 2025 de https://www.datacamp.com/tutorial/naive-bayes-scikit-learn
+DataCamp. (s.f.). Naive Bayes Classification with Scikit-Learn. Recuperado el 7 de junio de 2025 de <https://www.datacamp.com/tutorial/naive-bayes-scikit-learn>
 
-Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de https://scikit-learn.org/stable/modules/naive_bayes.html
-
-
-Simplilearn. (s.f.). What is Epoch in Machine Learning? Simplilearn. https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning
-
-Gupta, P. (2021). Comprehensive guide to artificial neural networks with Keras [Notebook]. Kaggle. https://www.kaggle.com/code/prashant111/comprehensive-guide-to-ann-with-keras/notebook
-
-Scikit-learn. (s.f.). Developing scikit-learn estimators. Scikit-learn. https://scikit-learn.org/stable/developers/develop.html
-
-XGBoost. (s.f.). Python package introduction. XGBoost. https://xgboost.readthedocs.io/en/stable/python/python_intro.html
-
-Jain, A. (2016, 17 de marzo). Complete guide to parameter tuning in XGBoost with codes in Python. Analytics Vidhya. https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
-
-XGBoost. (s.f.). Introduction to boosted trees. XGBoost. https://xgboost.readthedocs.io/en/stable/tutorials/model.html
-
-Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. https://doi.org/10.1145/2939672.2939785
-
-Techtonique. (2025, 1 de enero). Explaining XGBoost predictions with the Teller. Techtonique. https://www.techtonique.net/post/explaining-xgboost-predictions-teller/
-
-Brownlee, J. (s.f.). Gradient boosting with scikit-learn, XGBoost, LightGBM, and CatBoost. Machine Learning Mastery. https://machinelearningmastery.com/gradient-boosting-with-scikit-learn-xgboost-lightgbm-and-catboost/
+Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. Recuperado el 7 de junio de 2025 de <https://scikit-learn.org/stable/modules/naive_bayes.html>
 
 
+Simplilearn. (s.f.). What is Epoch in Machine Learning? Simplilearn. <https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning>
 
-Enlace a repositorio GitHub: https://github.com/CisarUli/Proyecto_CA0305_Grupo_02
+Gupta, P. (2021). Comprehensive guide to artificial neural networks with Keras [Notebook]. Kaggle. <https://www.kaggle.com/code/prashant111/comprehensive-guide-to-ann-with-keras/notebook>
+
+Scikit-learn. (s.f.). Developing scikit-learn estimators. Scikit-learn. <https://scikit-learn.org/stable/developers/develop.html>
+
+XGBoost. (s.f.). Python package introduction. XGBoost. <https://xgboost.readthedocs.io/en/stable/python/python_intro.html>
+
+Jain, A. (2016, 17 de marzo). Complete guide to parameter tuning in XGBoost with codes in Python. Analytics Vidhya. <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>
+
+XGBoost. (s.f.). Introduction to boosted trees. XGBoost. <https://xgboost.readthedocs.io/en/stable/tutorials/model.html>
+
+Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 785–794. <https://doi.org/10.1145/2939672.2939785>
+
+Techtonique. (2025, 1 de enero). Explaining XGBoost predictions with the Teller. Techtonique. <https://www.techtonique.net/post/explaining-xgboost-predictions-teller/>
+
+Brownlee, J. (s.f.). Gradient boosting with scikit-learn, XGBoost, LightGBM, and CatBoost. Machine Learning Mastery. <https://machinelearningmastery.com/gradient-boosting-with-scikit-learn-xgboost-lightgbm-and-catboost/>
+
+
+
+Enlace a repositorio GitHub: <https://github.com/CisarUli/Proyecto_CA0305_Grupo_02>
 
 
