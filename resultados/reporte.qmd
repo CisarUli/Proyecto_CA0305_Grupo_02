@@ -245,7 +245,40 @@ Aqui podemos ver los resultados:
 
 # Conclusiones y recomendaciones
 
+El análisis comparativo de los XGB, NB y BPANN permite extraer varias conclusiones clave sobre su desempeño en la predicción de churn en el sector de telecomunicaciones:
+
+### Modelo XGB
+XGBoost obtuvo la mejor precisión global (81 %), destacándose especialmente por su recall alto en la clase "Churn" (85 %), lo que lo hace muy valioso para identificar clientes que efectivamente se darán de baja.
+Aunque presenta un rendimiento ligeramente inferior al Deep-BP-ANN del estudio base (88.12 %), XGB se muestra más eficiente computacionalmente y con menor consumo de recursos, convirtiéndose en una opción práctica para escenarios de producción real, como seria el caso de la replicacion del articulo, ya que como estudiantes, no disponemos de la capacidad computacional, economica ni de tiempo que posiblemente tuvieron los autores del estudio, por lo que si tuvieramos estas condiciones similares, posiblemente tendriamos un resultado similar al del articulo.
+
+### Modelo NB
+Naive Bayes alcanzó una precisión global de 76 %, mostrando un desempeño aceptable y balanceado. Su recall en la clase "Churn" (81 %) indica que logra captar bien los clientes que abandonan, aunque su precisión es algo más baja, siendo lo esperado, ya que es el modelo que en el articulo tuvo el peor desempeño.
+Este modelo es sencillo de implementar, rápido y útil como referencia inicial o como complemento interpretativo a modelos más complejos.
+
+### Modelo BPANN
+BPANN mostró una precisión general de 77 %, ubicándose entre XGB y NB. Destaca por su recall alto en la clase "No Churn" (83 %), pero con menor recall en "Churn" (70 %), lo que sugiere menor capacidad para identificar abandonos en comparación con XGB.
+Este modelo, aunque potente, requiere mayor potencia computacional y tiempo de entrenamiento (60 a 160 épocas), lo que puede limitar su aplicabilidad práctica en contextos con restricciones de recursos, como es el caso de nosotros estudiantes, ya que el poder computacional no era el más optimo, además de el factor tiempo.
+
+## Comparación general
+Los tres modelos muestran fortalezas distintas:
+
+XGB se presenta como la opción más balanceada y potente para retención de clientes.
+
+NB destaca por su simplicidad y rapidez, con un rendimiento razonable.
+
+BPANN ofrece resultados sólidos, pero su costo computacional lo hace menos atractivo si no se dispone de infraestructura adecuada.
+
+## Recomendaciones
+Principalmente, es fundamental analizar la situación actual y los objetivos específicos antes de escoger un modelo. Dependiendo del poder computacional disponible, el tiempo que se pueda invertir y las necesidades del negocio (por ejemplo, interpretabilidad, velocidad o precisión), se debe seleccionar la alternativa más adecuada. La selección final del modelo no solo debe basarse en el rendimiento predictivo, sino también considerar factores prácticos como costo, recursos y facilidad de implementación.
+
+Además, es importante señalar que el análisis se realizó únicamente sobre uno de los dos datasets disponibles. Esta decisión se tomó intencionalmente, ya que desde el inicio se argumentó que ambos conjuntos presentaban una alta similitud en su estructura y comportamiento. Por ello, se concluyó que un solo análisis era suficiente para obtener resultados representativos y concluyentes.
+
+Un punto clave que refuerza esta decisión es la línea destacada en el artículo:
+
+
 > La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.
+
+Esto se comprobó durante nuestro proceso, ya que al utilizar un dataset con un análisis exploratorio (EDA) preliminar diferente, los resultados fueron considerablemente más bajos. Al replicar un EDA más cercano al propuesto en el artículo original, se lograron resultados mucho más alineados, lo que confirma la importancia crítica de un preprocesamiento y selección de variables adecuados.
 
 # Referencias
 
