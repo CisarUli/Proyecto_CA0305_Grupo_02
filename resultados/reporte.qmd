@@ -74,28 +74,35 @@ Esto representa mejoras respecto a modelos ANN previos (80–85%).
 
 ## Modelo XGB
 
+El modelo XGB, implementado en Python con la librería xgboost, presentó el siguiente desempeño:
+
 Métricas de evaluación:
 Clase 0 (No Churn):
 
-Precisión: 0.91 — acierta el 91 % al predecir "No Churn".
+Precisión: 0.84 — acierta el 84 % al predecir "No Churn".
 
-Recall: 0.82 — detecta el 82 % de los casos reales de "No Churn".
+Recall: 0.77 — detecta el 77 % de los casos reales de "No Churn".
 
-F1-score: 0.86 — buen equilibrio entre precisión y recall.
+F1-score: 0.80 — buen balance entre precisión y recall.
 
 Clase 1 (Churn):
 
-Precisión: 0.84 — acierta el 84 % al predecir "Churn".
+Precisión: 0.78 — acierta el 78 % al predecir "Churn".
 
-Recall: 0.92 — identifica el 92 % de los casos reales de "Churn".
+Recall: 0.85 — identifica el 85 % de los casos reales de "Churn".
 
-F1-score: 0.88 — muestra un excelente balance, destacando la capacidad del modelo para detectar clientes que efectivamente se van.
+F1-score: 0.82 — refleja un desempeño sólido y balanceado.
 
-Este modelo terminó con un 0.87 de accuracy, por lo que vemos un resultado similar al del estudio.
+La precisión global (accuracy) alcanzó un 81 %, lo que muestra un rendimiento general aceptable. Este resultado destaca especialmente en la clase "Churn", donde el recall es alto (0.85), lo que indica que el modelo tiene buena capacidad para identificar clientes que efectivamente abandonan el servicio.
 
 Para mejorar, se podrían usar técnicas como SMOTE, optimización de hiperparámetros o análisis de importancia de características. Comparado con el Deep-BP-ANN del papper(88.12% de precisión), XGB es ligeramente inferior, pero más eficiente computacionalmente.
 
-![](imagenes/XGB_resultados.png)
+| Evaluacion modelo XGBOOST |           |       |          |
+|:-------------------------:|:---------:|:-----:|:--------:|
+|                           | Precicion | recal | F1-score |
+|             0             |    0.84   |  0.77 |   0.80   |
+|             1             |    0.78   |  0.85 |   0.82   |
+|           Final           |    0.81   |       |          |
 
 
 ## Modelo NB (Naive Bayes)
