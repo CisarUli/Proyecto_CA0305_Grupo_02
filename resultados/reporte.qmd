@@ -180,6 +180,106 @@ Aqui podemos ver los resultados:
 |          Final          |    0.77   |       |          |
 
 # Analisis FODA
+Fortalezas
+
+Metodología sólida y bien documentada: El proyecto se basa en un estudio académico robusto (Fujo et al., 2022), utilizando datasets reconocidos como IBM Telco y Cell2Cell, lo que asegura una base confiable para la replicación.
+
+
+
+Uso de técnicas avanzadas de Machine Learning: La implementación de un modelo Deep-BP-ANN con optimizaciones como Early Stopping y Activity Regularization demuestra un enfoque moderno y efectivo, con resultados superiores (88.12% de exactitud en IBM Telco).
+
+
+
+Análisis comparativo exhaustivo: Se evaluaron múltiples modelos (XGB, NB, BPANN) con métricas claras (Accuracy, Precision, Recall, F1-Score, AUC), lo que permite una comparación objetiva de su desempeño.
+
+
+
+Tratamiento del desbalance de clases: El uso de Random Oversampling aborda eficazmente el problema del desbalance, mejorando la capacidad predictiva para la clase minoritaria (churn).
+
+
+
+Selección de características optimizada: La combinación de Lasso Regression y Variance Thresholding asegura que solo las variables más relevantes se utilicen, mejorando la eficiencia del modelo.
+
+
+
+Replicabilidad práctica: El proyecto incluye referencias claras al código (repositorio GitHub) y a las técnicas empleadas, lo que facilita su adaptación a otros contextos de telecomunicaciones.
+
+Oportunidades
+
+
+
+
+
+Aplicación en la industria de telecomunicaciones: Los resultados pueden ser utilizados para desarrollar sistemas predictivos personalizados que optimicen campañas de retención de clientes en empresas reales.
+
+
+
+Escalabilidad a otros sectores: La metodología puede adaptarse a industrias con problemas similares de abandono de clientes, como banca, seguros o comercio electrónico.
+
+
+
+Mejoras mediante técnicas avanzadas: La implementación de técnicas como SMOTE, optimización de hiperparámetros o ensemble learning podría incrementar aún más la precisión de los modelos.
+
+
+
+Acceso a nuevos datasets: Incorporar datasets más grandes o actualizados podría mejorar la generalización de los modelos y su aplicabilidad en escenarios diversos.
+
+
+
+Uso de infraestructura computacional avanzada: Con mayor poder computacional, se podrían explorar arquitecturas más complejas o entrenamientos más prolongados para mejorar los resultados del modelo Deep-BP-ANN.
+
+
+
+Colaboración interdisciplinaria: Asociarse con expertos en ciencia de datos o dominio del negocio podría enriquecer el análisis de variables predictoras y su impacto en la retención.
+
+Debilidades
+
+
+
+
+
+Limitaciones computacionales: El modelo Deep-BP-ANN, aunque efectivo, requiere un alto consumo de recursos (energía, tiempo y dinero), lo que puede limitar su implementación práctica en entornos con infraestructura limitada.
+
+
+
+Desempeño inferior de modelos alternativos: Los modelos XGB (81%) y NB (76%) tienen una precisión menor comparada con el Deep-BP-ANN (88.12%), lo que indica que no todos los enfoques son igualmente efectivos.
+
+
+
+Dependencia de la calidad de los datos: Como se menciona en el proyecto, la calidad de las variables predictoras es crítica, y cualquier dataset con datos incompletos o ruidosos podría afectar los resultados.
+
+
+
+Falta de análisis de hiperparámetros detallado: Aunque se mencionan optimizaciones, no se profundiza en la experimentación exhaustiva de hiperparámetros, lo que podría limitar el rendimiento óptimo de los modelos.
+
+
+
+Recall moderado en la clase Churn para BPANN: Con un recall de 0.70 para la clase Churn, el modelo BPANN podría estar omitiendo algunos casos de abandono, lo que es crítico en aplicaciones prácticas.
+
+Amenazas
+
+
+
+
+
+Competencia en la industria: Otras empresas podrían estar implementando modelos más avanzados o con mayor capacidad computacional, lo que podría superar los resultados del proyecto.
+
+
+
+Obsolescencia tecnológica: Las técnicas de Deep Learning evolucionan rápidamente, y los métodos utilizados podrían quedar desactualizados frente a nuevos enfoques como transformers o modelos híbridos.
+
+
+
+Restricciones de datos: La privacidad y regulación de datos (como GDPR) podrían limitar el acceso a datasets de clientes reales, afectando la capacidad de replicar o escalar el modelo.
+
+
+
+Costo de implementación: La adopción de modelos como Deep-BP-ANN en entornos reales puede ser costosa debido a la necesidad de infraestructura avanzada y mantenimiento continuo.
+
+
+
+Riesgo de sobreajuste: Aunque se usaron técnicas como Early Stopping, el modelo podría no generalizar bien en datasets diferentes a IBM Telco o Cell2Cell, especialmente si las distribuciones de datos varían.
+
 
 # Conclusiones y recomendaciones
 > La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.
