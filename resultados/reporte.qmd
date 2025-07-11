@@ -133,23 +133,39 @@ Recall: 0.81  Captura el 81% de los clientes que efectivamente se van.
 
 F1-score: 0.77  Moderadamente útil para detectar churn.
 
-| Evaluacion modelo BPANN |           |       |          |
-|:-----------------------:|:---------:|:-----:|:--------:|
-|                         | Precicion | recal | F1-score |
-|            0            |    0.74   |  0.83 |   0.78   |
-|            1            |    0.81   |  0.70 |   0.75   |
-|          Final          |    0.77   |       |          |
+| Evaluacion modelo NB |           |       |          |
+|:--------------------:|:---------:|:-----:|:--------:|
+|                      | Precicion | recal | F1-score |
+|           0          |    0.79   |  0.71 |   0.75   |
+|           1          |    0.74   |  0.81 |   0.77   |
+|         Final        |    0.76   |       |          |
 
 
 ## Modelo BPANN
 Época final (epoch): Variable, entre 60 y 160.
 El entrenamiento se detuvo entre los 60 y 160 cicloscompletos de entrenamiento a través de todos los datos de entrada, deteniendose cuando el error dejara de disminuir.
 
-
 Error final promedio: 0.36%
 Este valor representa el error acumulado al final del entrenamiento. 
 
-Promedio de precisión: 77%
+Métricas de evaluación:
+Clase 0 (No Churn):
+
+Precisión: 0.74 — acierta el 74 % al predecir "No Churn".
+
+Recall: 0.83 — detecta el 83 % de los clientes que realmente no abandonan.
+
+F1-score: 0.78 — buen equilibrio entre precisión y recall.
+
+Clase 1 (Churn):
+
+Precisión: 0.81 — acierta el 81 % al predecir "Churn".
+
+Recall: 0.70 — identifica el 70 % de los clientes que efectivamente abandonan.
+
+F1-score: 0.75 — refleja un desempeño aceptable, aunque con oportunidad de mejorar el recall.
+
+La precisión global (accuracy) fue de 77 %, mostrando un rendimiento moderado y balanceado.
 
 Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano al estudio debido al poder computacional que es un factor limitande debido a el consumo energetico, de tiempo y dinero. Aun asi, el modelo predice satisfactoriamente.
 
@@ -158,9 +174,9 @@ Aqui podemos ver los resultados:
 | Evaluacion modelo BPANN |           |       |          |
 |:-----------------------:|:---------:|:-----:|:--------:|
 |                         | Precicion | recal | F1-score |
-|            0            |    0.79   |  0.71 |   0.75   |
-|            1            |    0.74   |  0.81 |   0.77   |
-|          Final          |    0.76   |       |          |
+|            0            |    0.74   |  0.83 |   0.78   |
+|            1            |    0.81   |  0.70 |   0.75   |
+|          Final          |    0.77   |       |          |
 
 ### Analisis FODA
 
