@@ -183,7 +183,7 @@ Aqui podemos ver los resultados:
 
 ## Fortalezas
 
--   **Metodología sólida y bien documentada**: El proyecto se basa en un estudio académico robusto (Fujo et al., 2022) y utiliza datasets reconocidos como IBM Telco y Cell2Cell, lo que garantiza una base confiable y replicable.
+-   **Metodología sólida y bien documentada**: El proyecto se basa en un estudio académico robusto (Fujo et al., 2022) y utiliza el dataset reconocido IBM Telco, lo que garantiza una base confiable y replicable.
 
 -   **Uso de técnicas avanzadas de Machine Learning**: La implementación del modelo Deep-BP-ANN, optimizado con *Early Stopping* y *Activity Regularization*, logra una alta precisión (88.12% en IBM Telco), superando a modelos tradicionales.
 
