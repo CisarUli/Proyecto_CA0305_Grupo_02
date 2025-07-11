@@ -11,8 +11,8 @@ datos_limpios.limpiar()
 
 bpan = BPANN(datos_limpios.datos[0], datos_limpios.datos[1])
 nb = NB(datos_limpios.datos[0], datos_limpios.datos[1])
-xgboost = XGBModel()
+xgboost = XGBModel(datos_limpios.datos[0], datos_limpios.datos[1])
 
 bpan.probar()
 nb.probar()
-xgboost.evaluar(datos_limpios.datos[0], datos_limpios.datos[1])
+xgboost.evaluar()
