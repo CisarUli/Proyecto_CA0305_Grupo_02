@@ -126,7 +126,12 @@ Recall: 0.81  Captura el 81% de los clientes que efectivamente se van.
 
 F1-score: 0.77  Moderadamente útil para detectar churn.
 
-![](imagenes/Resultados_NB_Basedatos4.jpeg)
+| Evaluacion modelo BPANN |           |       |          |
+|:-----------------------:|:---------:|:-----:|:--------:|
+|                         | Precicion | recal | F1-score |
+|            0            |    0.74   |  0.83 |   0.78   |
+|            1            |    0.81   |  0.70 |   0.75   |
+|          Final          |    0.77   |       |          |
 
 
 ## Modelo BPANN
@@ -143,8 +148,12 @@ Notamos que el uso del modelo BPANN es el mas alto, en este caso no tan cercano 
 
 Aqui podemos ver los resultados:
 
-![](imagenes/BPANN_Basedatos4.png)
-
+| Evaluacion modelo BPANN |           |       |          |
+|:-----------------------:|:---------:|:-----:|:--------:|
+|                         | Precicion | recal | F1-score |
+|            0            |    0.74   |  0.83 |   0.78   |
+|            1            |    0.81   |  0.70 |   0.75   |
+|          Final          |    0.77   |       |          |
 
 ### Analisis FODA
 
