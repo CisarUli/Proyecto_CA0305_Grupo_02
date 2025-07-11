@@ -159,10 +159,7 @@ Pedregosa, F., et al. (s.f.). Naive Bayes — scikit-learn 1.4.2 documentation. 
 
 Simplilearn. (s.f.). What is Epoch in Machine Learning? Simplilearn. https://www.simplilearn.com/tutorials/machine-learning-tutorial/what-is-epoch-in-machine-learning
 
-
 Gupta, P. (2021). Comprehensive guide to artificial neural networks with Keras [Notebook]. Kaggle. https://www.kaggle.com/code/prashant111/comprehensive-guide-to-ann-with-keras/notebook
-
-
 
 Scikit-learn. (s.f.). Developing scikit-learn estimators. Scikit-learn. https://scikit-learn.org/stable/developers/develop.html
 
