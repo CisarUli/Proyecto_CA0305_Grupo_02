@@ -158,9 +158,9 @@ Aqui podemos ver los resultados:
 | Evaluacion modelo BPANN |           |       |          |
 |:-----------------------:|:---------:|:-----:|:--------:|
 |                         | Precicion | recal | F1-score |
-|            0            |    0.74   |  0.83 |   0.78   |
-|            1            |    0.81   |  0.70 |   0.75   |
-|          Final          |    0.77   |       |          |
+|            0            |    0.79   |  0.71 |   0.75   |
+|            1            |    0.74   |  0.81 |   0.77   |
+|          Final          |    0.76   |       |          |
 
 ### Analisis FODA
 
