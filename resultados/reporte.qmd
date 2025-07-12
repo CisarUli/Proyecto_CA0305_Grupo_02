@@ -179,49 +179,6 @@ Aqui podemos ver los resultados:
 |            1            |    0.81   |  0.70 |   0.75   |
 |          Final          |    0.77   |       |          |
 
-# Análisis FODA
-
-## Fortalezas
-
--   **Metodología robusta y documentada**: El proyecto se basa en un enfoque académico sólido, inspirado en estudios como Fujo et al. (2022), y utiliza datasets reconocidos como IBM Telco y Cell2Cell. Esto asegura una base confiable y facilita la reproducibilidad de los resultados.
-
--   **Uso de técnicas avanzadas**: El modelo Deep-BP-ANN, optimizado con *Early Stopping* y *Activity Regularization*, logra una precisión destacada del 88.12% en IBM Telco, superando a modelos tradicionales como XGBoost y Naive Bayes.
-
--   **Evaluación comparativa completa**: Se analizaron múltiples modelos (XGB con 81%, NB con 76%, BPANN con 77%) utilizando métricas claras como Accuracy, Precision, Recall y F1-Score, lo que permite una comparación objetiva de su rendimiento.
-
--   **Manejo del desbalance de clases**: La aplicación de *Random Oversampling* mejora la capacidad de los modelos para detectar casos de abandono (*churn*), un aspecto crítico dado el desbalance de clases (26–29% de *churn*).
-
--   **Selección eficiente de variables**: Mediante *Lasso Regression* y *Variance Thresholding*, se identificaron variables clave como el cargo total y la antigüedad del cliente, optimizando la precisión y reduciendo la complejidad del modelo.
-
--   **Transparencia y accesibilidad**: El código está disponible en un repositorio de GitHub, y la documentación detallada permite que otros puedan entender y replicar el trabajo.
-
-## Oportunidades
-
--   **Aplicación práctica en telecomunicaciones**: Los modelos desarrollados pueden implementarse en empresas del sector para optimizar estrategias de retención de clientes, reduciendo el abandono y mejorando la rentabilidad.
-
--   **Colaboración interdisciplinaria**: Trabajar con equipos de marketing o expertos en el negocio podría alinear mejor los modelos con las necesidades prácticas de las empresas, maximizando su impacto.
-
--   **Uso de infraestructura avanzada**: Acceder a mayor capacidad computacional, como GPUs, permitiría entrenar modelos más complejos o acelerar el proceso, mejorando la eficiencia.
-
-## Debilidades
-
--   **Alto costo computacional**: El modelo Deep-BP-ANN requiere recursos significativos (energía, tiempo y dinero), lo que puede limitar su implementación en entornos con infraestructura restringida.
-
--   **Rendimiento limitado de modelos alternativos**: Los modelos XGBoost (81%), Naive Bayes (76%) y BPANN (77%) son menos precisos que el Deep-BP-ANN (88.12%) del estudio original, lo que reduce las opciones en escenarios donde los recursos son limitados.
-
--   **Dependencia de la calidad de los datos**: Los resultados dependen de datos limpios y bien estructurados; datos ruidosos o incompletos podrían afectar negativamente el desempeño de los modelos.
-
--   **Recall moderado en la clase *churn***: En el modelo BPANN, el *recall* para la clase *churn* es de 0.70, lo que implica que algunos casos de abandono podrían no detectarse, un aspecto crítico para aplicaciones prácticas.
-
--   **Documentación práctica limitada**: Aunque el proyecto está bien documentado técnicamente, falta detalle sobre cómo implementar los modelos en un entorno real de telecomunicaciones, lo que podría dificultar su adopción.
-
-## Amenazas
-
--   **Obsolescencia tecnológica**: El campo del *Deep Learning* evoluciona rápidamente, y el modelo Deep-BP-ANN podría quedar desactualizado frente a nuevas metodologías.
-
--   **Restricciones de datos**: Regulaciones de privacidad, como el GDPR (General Data Protection Regulation), podrían limitar el acceso a datos reales de clientes, afectando la capacidad de entrenar o actualizar los modelos.
-
--   **Costo de implementación**: La adopción del modelo Deep-BP-ANN en entornos reales requiere una inversión significativa en infraestructura, lo que podría ser un obstáculo para algunas empresas.
 
 # Conclusiones y recomendaciones
 
@@ -242,14 +199,18 @@ Este modelo, aunque potente, requiere mayor potencia computacional y tiempo de e
 ## Comparación general
 Los tres modelos muestran fortalezas distintas:
 
-XGB se presenta como la opción más balanceada y potente para retención de clientes.
+XGB se presenta como la opción más balanceada y potente para retención de clientes, apoyado en la oportunidad de aplicarse directamente en empresas reales para optimizar estrategias de retención.
 
-NB destaca por su simplicidad y rapidez, con un rendimiento razonable.
+NB destaca por su simplicidad y rapidez, útiles en contextos donde la oportunidad es la colaboración interdisciplinaria y la rápida implementación.
 
-BPANN ofrece resultados sólidos, pero su costo computacional lo hace menos atractivo si no se dispone de infraestructura adecuada.
+BPANN, aunque ofrece resultados sólidos, su alto costo computacional y la posible amenaza de obsolescencia tecnológica lo hacen menos atractivo sin la infraestructura adecuada.
+
+La selección eficiente de variables y el manejo del desbalance de clases, identificados como fortalezas clave, mejoran significativamente la precisión y relevancia de los modelos. Sin embargo, la dependencia de la calidad de los datos y el recall moderado en "Churn" en BPANN resaltan debilidades críticas a considerar.
+
+Además, la existencia de un repositorio público y documentación accesible aporta transparencia, facilitando la adopción y réplica, fortaleciendo la posibilidad de aprovechar oportunidades como colaboraciones con equipos de negocio y uso en proyectos reales.
 
 ## Recomendaciones
-Principalmente, es fundamental analizar la situación actual y los objetivos específicos antes de escoger un modelo. Dependiendo del poder computacional disponible, el tiempo que se pueda invertir y las necesidades del negocio (por ejemplo, interpretabilidad, velocidad o precisión), se debe seleccionar la alternativa más adecuada. La selección final del modelo no solo debe basarse en el rendimiento predictivo, sino también considerar factores prácticos como costo, recursos y facilidad de implementación.
+Principalmente, es fundamental analizar la situación actual y los objetivos específicos antes de escoger un modelo. Dependiendo del poder computacional disponible, el tiempo que se pueda invertir y las necesidades del negocio (por ejemplo, interpretabilidad, velocidad o precisión), se debe seleccionar la alternativa más adecuada. La selección final del modelo no solo debe basarse en el rendimiento predictivo, sino también considerar factores prácticos como costo, recursos y facilidad de implementación, mitigando así las amenazas y debilidades identificadas.
 
 Además, es importante señalar que el análisis se realizó únicamente sobre uno de los dos datasets disponibles. Esta decisión se tomó intencionalmente, ya que desde el inicio se argumentó que ambos conjuntos presentaban una alta similitud en su estructura y comportamiento. Por ello, se concluyó que un solo análisis era suficiente para obtener resultados representativos y concluyentes.
 
@@ -259,6 +220,8 @@ Un punto clave que refuerza esta decisión es la línea destacada en el artícul
 > La calidad y relevancia de las variables predictoras incide más que el tamaño del dataset en el rendimiento del modelo.
 
 Esto se comprobó durante nuestro proceso, ya que al utilizar un dataset con un análisis exploratorio (EDA) preliminar diferente, los resultados fueron considerablemente más bajos. Al replicar un EDA más cercano al propuesto en el artículo original, se lograron resultados mucho más alineados, lo que confirma la importancia crítica de un preprocesamiento y selección de variables adecuados.
+
+Finalmente, para aprovechar las oportunidades identificadas (aplicación práctica, colaboración interdisciplinaria y uso de infraestructura avanzada), se recomienda fortalecer la documentación práctica del modelo, explorar colaboraciones con equipos técnicos y de negocio, y evaluar la inversión en recursos computacionales si se busca implementar soluciones avanzadas como Deep-BP-ANN en entornos reales.
 
 # Referencias
 
